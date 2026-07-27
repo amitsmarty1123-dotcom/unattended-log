@@ -13,7 +13,7 @@ you a customer three weeks later. This one tells me within a candle.
 
 ## Running tally
 
-Live since **2026-07-11**. Updated as things change.
+Live since **2026-07-11**. Last updated **2026-07-27**.
 
 | | |
 |---|---|
@@ -21,11 +21,12 @@ Live since **2026-07-11**. Updated as things change.
 | Automated tests gating every deploy | 934 |
 | Material incidents | 2 — **$0 lost to either** |
 | Monitoring-feed outages | 1 (19 hours — post #1) |
-| LLM spend, all-time | $8.00 across 2,968 calls (~$0.50/day), every call priced and attributed |
+| LLM spend, all-time | $8.09 across 3,202 calls (~$0.51/day), every call priced and attributed |
+| Where that spend goes | 63% narrator, 17% gate-2 vetting, 20% everything else (post #2) |
 | Infrastructure | ~$11.50/month, one small VPS |
-| Positions opened and managed end-to-end | 44 |
+| Positions opened and managed end-to-end | 46 |
 | Positions adopted from outside the signal path | 9 — each auto-fitted with an exchange-side stop at adoption |
-| Strategy P&L | **Negative.** Profit factor 0.44 over 53 trades, ~65% below high-water mark on a deliberately small stake |
+| Strategy P&L | **Negative.** Profit factor 0.44 over 55 trades, ~66% below high-water mark on a deliberately small stake |
 | Losses caused by an engineering failure | **0** |
 
 Those last two rows are the whole point, and they belong next to each other.
@@ -41,6 +42,7 @@ one. It exercises the loss paths constantly.
 
 ## Posts
 
+- [#2 — The $0.00 line item that wasn't zero](posts/002-the-zero-that-wasnt.md) · 2026-07-27
 - [#1 — The reconnect watchdog that would have failed on the exact outage it was built for](posts/001-watchdog-that-would-have-failed.md) · 2026-07-25
 
 ## The rest of it
