@@ -13,32 +13,41 @@ you a customer three weeks later. This one tells me within a candle.
 
 ## Running tally
 
-Live since **2026-07-11**. Last updated **2026-07-27**.
+Live since **2026-07-11**. Last updated **2026-07-28**.
 
 | | |
 |---|---|
-| Days unattended | 16 |
-| Automated tests gating every deploy | 934 |
-| Material incidents | 2 — **$0 lost to either** |
+| Days unattended | 17 |
+| Automated tests gating every deploy | 936 |
+| Material incidents | 3 — two cost nothing, **one cost money** |
 | Monitoring-feed outages | 1 (19 hours — post #1) |
-| LLM spend, all-time | $8.09 across 3,202 calls (~$0.51/day), every call priced and attributed |
-| Where that spend goes | 63% narrator, 17% gate-2 vetting, 20% everything else (post #2) |
+| LLM spend, all-time | $11.58 across 3,554 calls (~$0.68/day), every call priced and attributed |
+| Where that spend goes | 71% narrator, 12% gate-2 vetting, 17% everything else (post #2) |
 | Infrastructure | ~$11.50/month, one small VPS |
 | Positions opened and managed end-to-end | 46 |
 | Positions adopted from outside the signal path | 9 — each auto-fitted with an exchange-side stop at adoption |
-| Strategy P&L | **Negative.** Profit factor 0.44 over 55 trades, ~66% below high-water mark on a deliberately small stake |
-| Losses caused by an engineering failure | **0** |
+| Strategy P&L | **Negative.** Profit factor 0.50 over 56 trades, ~65% below high-water mark on a deliberately small stake |
+| Losses caused by an engineering failure | **1 incident** — a dropped-instruction defect left 8 positions to ride to their stop instead of flipping (~22% of all losses to date); found and fixed 2026-07-27 |
 
-Those last two rows are the whole point, and they belong next to each other.
-The strategy is losing money — that's a research problem, and research isn't
-what this log is about. Every dollar that left the account left the way it was
-designed to: through a stop sitting on the exchange from the moment of fill, at
-the distance the risk engine computed, on a position sized to a set fraction of
-equity. Nothing was lost to a crash, a hung feed, a provider error, or an LLM
-doing something surprising.
+**That last row used to read `0`, and the zero was wrong.** It is corrected
+here rather than quietly edited, because how a number gets retracted says more
+than the number did. The defect is written up as incident 3 in the case study.
+
+The zero was never verifiable — an absence of evidence dressed as evidence of
+absence, with no instrument that could have caught the counter-example. What
+found it was reading the rejection log directly and asking why a category with
+a healthy count had almost no successful outcomes.
+
+What survives is narrower and holds: every dollar that left the account,
+including the ones that defect cost, left through a stop sitting on the
+exchange from the moment of fill — at the distance the risk engine computed, on
+a position sized to a set fraction of equity. The bug meant positions stayed
+open when they should have flipped. It did not mean one ran unprotected, was
+sized wrong, or had a stop fail to fire.
 
 A losing strategy is actually a better test of the engineering than a winning
-one. It exercises the loss paths constantly.
+one. It exercises the loss paths constantly — and, it turns out, it also
+exercises your willingness to publish the paths you got wrong.
 
 ## Posts
 
