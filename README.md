@@ -22,7 +22,7 @@ Live since **2026-07-11**. Last updated **2026-07-28**.
 | Material incidents | 3 — two cost nothing, **one cost money** |
 | Monitoring-feed outages | 1 (19 hours — post #1) |
 | LLM spend, all-time | $11.58 across 3,554 calls (~$0.68/day), every call priced and attributed |
-| Where that spend goes | 71% narrator, 12% gate-2 vetting, 17% everything else (post #2) |
+| Where that spend goes | 71% narrator, 12% gate-2 vetting, 17% everything else — the day-16 breakdown and why it matters is post #2 |
 | Infrastructure | ~$11.50/month, one small VPS |
 | Positions opened and managed end-to-end | 46 |
 | Positions adopted from outside the signal path | 9 — each auto-fitted with an exchange-side stop at adoption |
